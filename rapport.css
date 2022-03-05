@@ -1,0 +1,549 @@
+* { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+
+    --clr-main-green: #A2C82D;
+    --clr-main-blue: #0EADE0;
+    --clr-main-orange: #FCEA11;
+    --clr-main-yellow: rgb(224, 218, 129);
+}
+
+body { 
+    font-family: 'Architects Daughter', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("./images//growing.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+nav { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(20, 44, 46);
+    border-bottom: 5px solid var(--clr-main-green);
+    width: 100%;
+    height: 100px;
+}
+
+nav div { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    color: white;
+}
+
+nav  h1 { 
+    color: white;
+    margin-left: 50px;
+}
+
+.rapport-wrapper { 
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.page { 
+    height: 296mm;
+    width: 210mm; 
+}
+
+#rapport-logo { 
+    width: 200px;
+    margin-left: 30px;
+}
+
+h2 { 
+    border-bottom: 2px solid var(--clr-main-green); 
+}
+
+.rapport-container { 
+    display: flex;
+    justify-content: space-around;
+}
+
+/*input on left side*/ 
+/*Student input*/ 
+.student-input { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 750px;
+    height: 100%; 
+    border: 5px solid var(--clr-main-green);
+    border-radius: 16px;
+    margin: 30px;
+    padding: 10px;
+    background-color: rgb(20, 44, 46);
+    color: white;
+}
+
+.student-input section { 
+    margin-bottom: 10px;
+}
+
+.personal-information-input div { 
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-notes-input { 
+    width: 100%;
+    max-width: 700px;
+    height: 60px;
+}
+
+/*Doelen input container*/
+.doelen-input-container { 
+    width: 100%; 
+    display: flex;
+    flex-direction: row; 
+}
+
+.doelen-input-container input {
+    max-width: 50px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    padding: 3px;
+}
+
+.subject-label-div { 
+    width: 120px;
+}
+
+/*Dia input container*/ 
+.dia-input-wrapper { 
+    display: flex;
+    flex-direction: row;
+}
+
+.dia-input-container input { 
+    padding: 3px;
+}
+
+.dia-input-container { 
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    margin-right: 10px;
+    
+}
+
+/*Social skills container */ 
+.socialskills-input { 
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Overig*/ 
+input[type = checkbox] { 
+    margin-right: 10px;
+}
+input[type = checkbox]:hover { 
+    cursor: pointer;
+}
+
+.overig-wrapper { 
+    display: flex;
+    height: 40px;
+    width: 220px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overig-wrapper button{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+}
+
+.overig-wrapper div { 
+    display: flex;
+}
+
+.overig-wrapper button:nth-child(1) { 
+    background-color: rgb(16, 190, 16);
+}
+.overig-wrapper button:nth-child(1):hover { 
+    cursor: pointer;
+    background-color: rgb(149, 204, 149);
+}
+
+/* LevelWork */
+#level-work-div { 
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+#level-work-div input { 
+    width: 80%;
+}
+
+/* Spreekbeurt */
+.spreekbeurt-item,
+.boekbespreking-item,
+.werkstuk-item, 
+.project-item,
+.levelwork-item { 
+    display: flex;
+    align-items: center;
+}
+
+.spreekbeurt-item p,
+.boekbespreking-item p,
+.werkstuk-item p, 
+.project-item p,
+.levelwork-item p {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.fa-check-square { 
+    color: var(--clr-main-green);
+    margin-right: 5px;
+}
+
+.spreekbeurt-rapport-display { 
+    display: flex;
+    align-items: center;
+}
+
+.removeItemButton { 
+    margin-left: 3px;
+}
+
+.removeItemButton:hover { 
+    color: rgb(211, 97, 97); 
+    transform: scale(1.2);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+/*Personal message container */ 
+.personal-message div {
+    margin: 10px;
+}
+
+.personal-message textarea { 
+    width: 100%;
+    max-width: 330px;
+    max-height: 120px;
+    height: 120px;
+    border: 3px solid var(--clr-main-green);
+    padding: 5px;
+}
+
+/*display on right side*/ 
+
+/*Personal info*/
+.student-information-container { 
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    height: 100px; 
+    padding: 10px;
+    border-bottom: 4px solid black;
+}
+
+.personal-information { 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.personal-information span { 
+    margin-left: 5px;
+}
+
+.personal-goal-text { 
+    width: 80%; 
+    height: 120px;
+    border: 1px solid black; 
+    padding: 5px;
+}
+
+/* Results display */
+.results-table table { 
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.results-table table tr th,
+.results-table table tr td { 
+    width: 300px;
+    padding: 5px;
+    text-align: center;
+}
+
+.results-table table th { 
+    background-color: var(--clr-main-blue);
+    color: white;
+}
+
+#rekenen-slider-display { 
+    position: relative; 
+    border: 1px solid black;
+    width: 202px;
+    margin: 2px auto;
+}
+
+.slider-knob { 
+    position: absolute; ;
+    top: -5px;
+    left: -2px;
+
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 16px solid var(--clr-main-green);
+}
+
+.slider-knobR2 { 
+    border-top: 16px solid var(--clr-main-orange);
+}
+
+/* Personal message and signature display */ 
+#personal-message-display, 
+#personal-message-displayR2,
+.signature { 
+    width: 300px; 
+    height: 200px;
+    border: 2px solid black; 
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+    margin-top: 40px;
+}
+
+.personal-message-wrapper { 
+    display: flex;
+}
+
+.signature-container,
+.personal-message-container { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.signature-container div { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.signature-wrap div { 
+    display: flex;
+    flex-direction: row;
+}
+
+.button-container { 
+    display: flex;
+    align-items: end;
+    margin-left: 3px;
+}
+
+/*Next year*/
+.next-year { 
+    text-align: center;
+}
+
+.next-year div { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    width: 120px; 
+    height: 120px; 
+    border: 2px solid black;
+}
+
+/*Button styling*/
+#add-student-name, 
+#download-rapport,
+#save-current-rapport,
+#retreive-student-name,
+#clear-button  { 
+    font-weight: 800;
+    font-size: 1rem;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+}
+
+#add-student-name { 
+    background-color: var(--clr-main-blue);
+}
+
+#save-current-rapport { 
+    background-color: var(--clr-main-green);
+}
+
+#download-rapport { 
+    background-color: var(--clr-main-orange);
+}
+
+#retreive-student-name { 
+    width: 35%;
+    background-color: var(--clr-main-green);
+}
+#clear-button { 
+    width: 35%;
+    background-color: rgb(231, 80, 80);
+}
+
+#retreive-student-name:hover,
+#save-current-rapport:hover,
+#add-student-name:hover,
+#download-rapport:hover,
+#clear-button:hover  { 
+    cursor: pointer;
+    border: 2px solid black;
+} 
+
+#retreive-student-name:hover { 
+    background-color: rgb(188, 223, 153);
+}
+
+#save-current-rapport:hover { 
+    background-color: rgb(188, 223, 153);
+}
+
+#add-student-name:hover{ 
+    background-color: rgb(160, 209, 238);
+}
+
+#download-rapport:hover { 
+    background-color:rgb(236, 217, 112)
+}
+
+#clear-button:hover { 
+    background-color: rgb(226, 147, 147);
+}
+
+.top-button-div { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 1598px ) { 
+    #rapport-container-dia { 
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 1562px ) { 
+    .rapport-wrapper { 
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*Login page*/
+
+#login-container { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px; 
+    height: 500px; 
+    border-radius: 16px; 
+    background-color: rgba(153, 190, 152, 0.2);
+    box-shadow: 1px 3px 3px 1px rgb(35, 49, 35);
+    margin: 5% auto;
+}
+
+.input-field-container { 
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.input-field-container i { 
+    position: absolute;
+    left: 6px;
+}
+
+#login-container div { 
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#login-container div input { 
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid var(--clr-main-green);
+    background-color: rgba(181, 226, 99, 0);
+    margin-top: 5px; 
+    margin-bottom: 10px;
+}
+
+#login-container div input { 
+   width: 80%;
+    padding: 5px;
+}
+
+#login-button { 
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    background-color: var(--clr-main-blue);
+}
+
+#login-button:hover { 
+    cursor: pointer;
+    background-color: rgb(124, 180, 202); 
+}
+
+#logout-button { 
+    width: 100%;
+    margin: 10px;
+    padding: 6px;
+    color: white;
+    font-size: 20px;
+    background-color: var(--clr-main-blue);
+    border: none;
+    display: none;
+}
+
+#logout-button:hover { 
+    cursor: pointer;
+    background-color:rgb(147, 205, 216);
+    border: 2px solid white;
+    padding: 4px;
+  
+}
+
+#login-container img { 
+    width: 150px;
+}

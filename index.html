@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rapport.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/455ce46c8f.js" crossorigin="anonymous"></script>
+    <title>Spreng-El Rapport</title>
+</head>
+<body>
+    <nav>
+        <h1>Spreng-El Rapport Tool</h1>
+        <div>
+            <span id="logged-user"></span>
+            <button id="logout-button">Logout</button>
+        </div>
+    </nav>
+    <div id="login-container">
+        <div>
+            <h1>Login</h1>
+            <h3>Spreng-El Rapport Tool</h3>
+            <img src="./images/logo.png"/>
+        </div>
+        <div>
+            <div class="input-field-container">
+                <i class="fas fa-sign-in-alt"></i>
+                <input type="email"
+                       placeholder="E-mail.."
+                       id = "email-input">
+                </input>
+            </div>
+            <div class="input-field-container">
+                <i class="fas fa-unlock"></i>
+                <input type="password"
+                       placeholder="Wachtwoord.."
+                       id="wachtwoord-input">
+                </input>
+            </div>
+            <button id="login-button">Login</button>
+        </div>
+    </div>
+    <div class="rapport-wrapper">
+        <div class="student-input">
+            <section>
+                <div class="top-button-div">
+                    <button id="clear-button">Wis rapport velden</button>
+                    <button id="retreive-student-name">Haal leerling gegevens op</button>
+                </div>
+                <h2>Persoonlijke informatie</h2>
+                <div class="personal-information-input">
+                    <div><label>Naam leerling:</label><input id="input-student-name"></div>
+                    <div><label>Groep:</label><input id="input-student-group"></div>
+                    <div><label>Leerkracht:</label><input id="input-teacher"></div>
+                </div>
+            </section>
+            <section>
+                <h2>Persoonlijk</h2>
+                <div>
+                    <h2><h3>Persoonlijk leerdoel:</h3></h2>
+                    <textarea class="personal-notes-input" placeholder ="Persoonlijke opmerkingen..." id="personal-notes"></textarea>
+                </div>
+                <div>
+                    <h2><h3>Ontwikkeling:</h3></h2>
+                    <textarea class="personal-notes-input" placeholder ="Persoonlijk leerdoel..." id="personal-goal"></textarea>
+                </div>
+                <div>
+                    <h2><h3>Mijn Parel:</h3></h2>
+                    <textarea class="personal-notes-input" placeholder ="Mijn Parel..." id="personal-pearl"></textarea>
+                </div>
+                <div>
+                    <h2><h3>Sociale omgang:</h3></h2>
+                    <textarea class="personal-notes-input" placeholder ="Sociale omgang..." id="personal-social-skills"></textarea>
+                </div>
+                <div>
+                    <h2><h3>Zelfstandigheid:</h3></h2>
+                    <textarea class="personal-notes-input" placeholder ="Zelfstandigheid..." id="personal-independence"></textarea>
+                </div>
+                <div>
+                    <h2><h3>Werkhouding:</h3></h2>
+                    <textarea class="personal-notes-input" placeholder ="Werkhouding..." id="personal-work-ethic"></textarea>
+                </div>
+            </section>
+            <section class = "rapport-container">
+                <div>
+                    <h2>Snappet doelen R1</h2>
+                    <div class="doelen-input-container"><div class="subject-label-div"><label>Doelen Rekenen</label></div><input id="doelen-rekenen-input"><p>/</p><input id="doelen-rekenen-total"></div>
+                    <div class="doelen-input-container"><div class="subject-label-div"><label>Doelen Taal</label></div><input id="doelen-taal-input"><p>/</p><input id="doelen-taal-total"></div>
+                    <div class="doelen-input-container"><div class="subject-label-div"><label>Doelen Spelling</label></div><input id="doelen-spelling-input"><p>/</p><input id="doelen-spelling-total"></div>
+                </div>
+                <div>
+                    <h2>Snappet doelen R2</h2>
+                    <div class="doelen-input-container"><div class="subject-label-div"><label>Doelen Rekenen</label></div><input id="doelen-rekenen-inputR2"><p>/</p><input id="doelen-rekenen-totalR2"></div>
+                    <div class="doelen-input-container"><div class="subject-label-div"><label>Doelen Taal</label></div><input id="doelen-taal-inputR2"><p>/</p><input id="doelen-taal-totalR2"></div>
+                    <div class="doelen-input-container"><div class="subject-label-div"><label>Doelen Spelling</label></div><input id="doelen-spelling-inputR2"><p>/</p><input id="doelen-spelling-totalR2"></div>
+                </div>
+            </section>
+            <section class="rapport-container">
+            <div>
+                <h2>Snappet Scores R1</h2>
+                <div class="dia-input-wrapper">
+                    <div class="dia-input-container"><label>Rekenen</label><input id="s-r-input"></div>
+                    <div class="dia-input-container"><label>Taal</label><input id="s-t-input"></div>
+                    <div class="dia-input-container"><label>Spelling</label><input id="s-s-input"></div>
+                </div>
+                <div class="slidecontainer">
+                    <h4>Rekenen</h4>
+                    <input type="range" min="0" max="100" value="50" className="slider" id="range-rekenen">
+                    <span class="range-display"></span>
+                </div>
+                <div class="slidecontainer">
+                    <h4>Taal</h4>
+                    <div class="slider-value-container">
+                        <input type="range" min="0" max="100" value="50" className="slider" id="range-taal">
+                        <span class="range-display"></span>
+                    </div>
+                </div>
+                <div class="slidecontainer">
+                    <h4>Spelling</h4>
+                    <div class="slider-value-container">
+                        <input type="range" min="0" max="100" value="50" className="slider" id="range-spelling">
+                        <span class="range-display"></span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>Snappet Scores R2</h2>
+                <div class="dia-input-wrapper">
+                    <div class="dia-input-container"><label>Rekenen</label><input id="s-r-inputR2"></div>
+                    <div class="dia-input-container"><label>Taal</label><input id="s-t-inputR2"></div>
+                    <div class="dia-input-container"><label>Spelling</label><input id="s-s-inputR2"></div>
+                </div>
+                <div class="slidecontainer">
+                    <h4>Rekenen</h4>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="range-rekenenR2">
+                    <span class="range-display"></span>
+                </div>
+                <div class="slidecontainer">
+                    <h4>Taal</h4>
+                    <div class="slider-value-container">
+                        <input type="range" min="0" max="100" value="50" class="slider" id="range-taalR2">
+                        <span class="range-display"></span>
+                    </div>
+                </div>
+                <div class="slidecontainer">
+                    <h4>Spelling</h4>
+                    <div class="slider-value-container">
+                        <input type="range" min="0" max="100" value="50" class="slider" id="range-spellingR2">
+                        <span class="range-display"></span>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <section class ="rapport-container" id="rapport-container-dia">
+                <div>
+                    <h2>Dia Scores R1</h2>
+                    <div class="dia-input-wrapper">
+                        <div class="dia-input-container"><label>DIA Cijfer</label><input id="d-r-input"></div>
+                        <div class="dia-input-container"><label>DIA Tekst</label><input id="d-t-input"></div>
+                        <div class="dia-input-container"><label>DIA Spelling</label><input id="d-s-input"></div>
+                        <div class="dia-input-container"><label>DIA Woordenschat</label><input id="d-w-input"></div>
+                    </div>
+                    <div class ="dia-input-wrapper">
+                        <div class="dia-input-container"><label>AVI</label><input id="avi-input"></div>
+                        <div class="dia-input-container"><label>DMT</label><input id="dmt-input"></div>
+                    </div>
+                </div>
+                <div>
+                    <h2>Dia Scores R2</h2>
+                    <div class="dia-input-wrapper">
+                        <div class="dia-input-container"><label>DIA Cijfer</label><input id="d-r-inputR2"></div>
+                        <div class="dia-input-container"><label>DIA Tekst</label><input id="d-t-inputR2"></div>
+                        <div class="dia-input-container"><label>DIA Spelling</label><input id="d-s-inputR2"></div>
+                        <div class="dia-input-container"><label>DIA Woordenschat</label><input id="d-w-inputR2"></div>
+                    </div>
+                    <div class ="dia-input-wrapper">
+                        <div class="dia-input-container"><label>AVI</label><input id="avi-inputR2"></div>
+                        <div class="dia-input-container"><label>DMT</label><input id="dmt-inputR2"></div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Overig</h2>
+                <div class ="overig-wrapper">
+                    <h3>Levelwerk</h3>
+                    <div>
+                        <button id= "add-level-work-button">+</button>
+                    </div>
+                </div>
+                <div id="level-work-div"></div>
+                <div class ="overig-wrapper">
+                    <h3>Spreekbeurt</h3>
+                    <div>
+                        <button id="add-spreekbeurt-button">+</button>
+                    </div>
+                </div>
+                <div id="spreekbeurt-div"></div>
+                <div class ="overig-wrapper">
+                    <h3>Boekbespreking</h3>
+                    <div>
+                        <button id="add-boekbespreking-button">+</button>
+                    </div>
+                </div>
+                <div id="boekbespreking-div"></div>
+                <div class ="overig-wrapper">
+                    <h3>Werkstuk</h3>
+                    <div>
+                        <button id="add-werkstuk-button">+</button>
+                    </div>
+                </div>
+                <div id="werkstuk-div"></div>
+                <div class ="overig-wrapper">
+                    <h3>Projecten</h3>
+                    <div>
+                        <button id="add-project-button">+</button>
+                    </div>
+                </div>
+                <div id="project-div"></div>
+            </section>
+            <section class="personal-message rapport-container">
+                <div>
+                    <h2>Persoonlijke opmerkingen R1</h2>
+                    <textarea placeholder ="Persoonlijk bericht hier.." id="personal-message"></textarea>
+                </div>
+                <div>
+                    <h2>Persoonlijke opmerkingen R2</h2>
+                    <textarea placeholder ="Persoonlijk bericht hier.." id="personal-messageR2"></textarea>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h3>Uw kind gaat volgend jaar naar:</h3>
+                    <input id="next-year-input"/>
+                </div>
+            </section>
+            <section>
+                <button id="add-student-name">Update rapport</button>
+                <button id="save-current-rapport">Save Rapport</button>
+                <button id="download-rapport">Download rapport</button>
+            </section>
+        </div>
+        <section class="rapport" id="rapport">
+            <section class="page page-one">
+                <div class="student-information-container">
+                    <div class="personal-information">
+                        <span id="display-student-name"></span>|
+                        <span id="display-student-group"></span>|
+                        <span id="display-teacher"></span>|
+                        <span id="display-year"></span>
+                    </div>
+                    <img id="rapport-logo" src="./CBS-De-Spreng-El2.png"/>
+                </div>
+                <h2>Persoonlijk</h2>
+                <div>
+                    <h3>Persoonlijk leerdoel:</h3>
+                    <div class="personal-goal-text" id="set-personal-notes"></div>
+                </div>
+                <div>
+                    <h3>Ontwikkeling:</h3>
+                    <div class="personal-goal-text" id="set-personal-goal"></div>
+                </div>
+                <div>
+                    <h3>Mijn parel:</h3>
+                    <div class="personal-goal-text" id="set-personal-pearl"></div>
+                </div>
+                <div>
+                    <h3>Sociale omgang:</h3>
+                    <div class="personal-goal-text" id="set-personal-social-skills"></div>
+                </div>
+                <div>
+                    <h3>Zelfstandigheid:</h3>
+                    <div class="personal-goal-text" id="set-personal-independence"></div>
+                </div>
+                <div>
+                    <h3>Werkhouding:</h3>
+                    <div class="personal-goal-text" id="set-personal-work-ethic"></div>
+                </div>
+        
+            </section>
+            <section class="page-two page">
+                <div class="student-information-container">
+                    <div class="personal-information">
+                        <div>
+                            pagina 2
+                        </div>
+                        <img id="rapport-logo" src="./CBS-De-Spreng-El2.png"/>
+                    </div>
+                </div>
+                <h2>Groei & Niveau</h2>
+                <div class="results-table">
+                    <table>
+                        <tr>
+                            <th>Vakken</th>
+                            <th>Rapport 1</th>
+                            <th>Rapport 2</th>
+                        </tr>
+                        <tr>
+                            <td class="resultaat-vak">Rekenen</td>
+                            <td>
+                                <span id="rekenen-snappet"></span>
+                                <div id="rekenen-slider-display">
+                                    <div class="slider-knob"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <span id="rekenen-snappetR2"></span>
+                                <div id="rekenen-slider-display">
+                                    <div class="slider-knob slider-knobR2"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="resultaat-vak">Taal</td>
+                            <td>
+                                <span id="taal-snappet"></span>
+                                <div id="rekenen-slider-display">
+                                    <div class="slider-knob">
+                                </div>
+                            </td>
+                            <td>
+                                <span id="taal-snappetR2"></span>
+                                <div id="rekenen-slider-display">
+                                    <div class="slider-knob slider-knobR2">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="resultaat-vak">Spelling</td>
+                            <td>
+                                <span id="spelling-snappet"></span>
+                                <div id="rekenen-slider-display">
+                                    <div class="slider-knob">
+                                </div>
+                            </td>
+                            <td>
+                                <span id="spelling-snappetR2"></span>
+                                <div id="rekenen-slider-display">
+                                    <div class="slider-knob slider-knobR2">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>DIA</th>
+                            <th>Rapport 1</th>
+                            <th>Rapport 2</th>
+                        </tr>
+                        <tr>
+                            <td class="resultaat-vak">Cijfer</td>
+                            <td>
+                                <span id="rekenen-dia"></span>
+                                <div id="dia-slider-display">
+                                    <div class="dia-slider-knob"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <span id="rekenen-diaR2"></span>
+                                <div id="dia-slider-displayR2">
+                                    <div class="dia-slider-knobR2"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="resultaat-vak">Tekst</td>
+                            <td>
+                                <span  id="tekst-dia"></span>
+                                <div id="dia-slider-display">
+                                    <div class="dia-slider-knob">
+                                </div>
+                            </td>
+                            <td>
+                                <span  id="tekst-diaR2"></span>
+                                <div id="dia-slider-displayR2">
+                                    <div class="dia-slider-knobR2">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="resultaat-vak">Spelling</td>
+                            <td>
+                                <span id="spelling-dia"></span>
+                                <div id="dia-slider-display">
+                                    <div class="slider-knob">
+                                </div>
+                            </td>
+                            <td>
+                                <span id="spelling-diaR2"></span>
+                                <div id="dia-slider-displayR2">
+                                    <div class="dia-slider-knobR2">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="resultaat-vak">Woordenschat</td>
+                            <td>
+                                <span id="woordenschat-dia"></span>
+                                <div id="dia-slider-display">
+                                    <div class="dia-slider-knob">
+                                </div>
+                            </td>
+                            <td>
+                                <span id="woordenschat-diaR2"></span>
+                                <div id="dia-slider-displayR2">
+                                    <div class="dia-slider-knobR2">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="resultaat-vak">AVI/DMT</td>
+                            <td>
+                                <span id="avi-dmt"></span>
+                            </td>
+                            <td>
+                                <span id="avi-dmt-R2"></span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>Vakken</th>
+                            <th>Behaalde doelen Rapport 1</th>
+                            <th>Behaalde doelen Rapport 2</th>
+                        </tr>
+                        <tr>
+                            <td class="resultaat-vak">Rekenen</td>
+                            <td id="rekenen-snappet-doelen"></td>
+                            <td id="rekenen-snappet-doelenR2"></td>
+                        </tr>
+                        <tr>
+                            <td class="resultaat-vak">Taal</td>
+                            <td id="taal-snappet-doelen"></td>
+                            <td id="taal-snappet-doelenR2"></td>
+                        </tr>
+                        <tr>
+                            <td class="resultaat-vak">Spelling</td>
+                            <td id="spelling-snappet-doelen"></td>
+                            <td id="spelling-snappet-doelenR2"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="overige-informatie">
+                    <h2>Presenteren & onderzoeken</h2>
+                    <div>
+                        <h3>Levelwerk</h3>
+                        <div id="rapport-levelwerk-container"></div>
+                    </div>
+                    <div>
+                        <h3>Spreekbeurt</h3>
+                        <div id="rapport-spreekbeurt-container"></div>
+                    </div>
+                    <div>
+                        <h3>Boekbespreking</h3>
+                        <div id="rapport-boekbespreking-container"></div>
+                    </div>
+                    <div>
+                        <h3>Werkstuk</h3>
+                        <div id="rapport-werkstuk-container"></div>
+                    </div>
+                    <div>
+                        <h3>Projecten</h3>
+                        <div id="rapport-project-container"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="page-three page">
+                <div class="student-information-container">
+                    <div class="personal-information">
+                        <div>
+                            pagina 3
+                        </div>
+                        <img id="rapport-logo" src="./CBS-De-Spreng-El2.png"/>
+                    </div>
+                </div>
+                <h2>Persoonlijke boodschap</h2>
+                <div class ="personal-message-wrapper">
+                    <div class="personal-message-container">
+                        <h3>Rapport 1</h3>
+                        <div id="personal-message-display"></div>
+                    </div>
+                    <div class="personal-message-container">
+                        <h3>Rapport 2</h3>
+                        <div id="personal-message-displayR2"></div>
+                    </div>
+                </div>
+                <div class="signature-container">
+                    <div class= "signature-wrap">
+                        <h4>Handtekening Leerkracht</h4>
+                        <div>
+                            <div class="signature"></div>
+                            <div class="signature"></div>
+                        </div>
+                    </div>
+                    <div class="signature-wrap">
+                        <h4>Handtekening Ouders</h4>
+                        <div>
+                            <div class="signature"></div>
+                            <div class="signature"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="next-year">
+                    <h4>Uw kind gaat naar:</h4>
+                    <div id="next-year-display"></div>
+                </div>
+            </section>
+        </section>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="rapport.js" type="module"></script>
+</body>
+</html>
