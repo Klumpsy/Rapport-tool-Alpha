@@ -689,14 +689,14 @@ deleteButton.addEventListener("click", () => {
 //FireBase config 
 const firebaseConfig = {
 
-    apiKey: "AIzaSyAFwkTdNUjNIe2p9BJy6kL9UCluWznIy0Q",
-    authDomain: "rapporttool-9fba7.firebaseapp.com",
-    projectId: "rapporttool-9fba7",
-    storageBucket: "rapporttool-9fba7.appspot.com",
-    messagingSenderId: "161118477421",
-    appId: "1:161118477421:web:868df79080786eaaa9b364",
-    measurementId: "G-RZ7K29VN6P",
-    databaseURL: "https://rapporttool-9fba7-default-rtdb.europe-west1.firebasedatabase.app/"
+    apiKey: "Secret",
+    authDomain: "Secret",
+    projectId: "Secret",
+    storageBucket:"Secret",
+    messagingSenderId: "Secret",
+    appId: "Secret",
+    measurementId: "Secret",
+    databaseURL:"Secret"
   };
   
 // Initialize Firebase
